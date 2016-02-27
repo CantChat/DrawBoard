@@ -137,10 +137,15 @@ typedef NS_ENUM(NSInteger, CurrentColorSelector) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+//    self.view.userInteractionEnabled = NO;
+
     [self initialValue];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    NSLog(@"touchesBegan");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
